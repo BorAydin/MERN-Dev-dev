@@ -4,3 +4,5 @@ This is a MERN stack application from the "MERN Stack Front To Back" course on U
 posts. Error solutions and additions are available.
 
 mongoURI is MongoDB connection data. Must add your mongoURI named default.json in config file.
+
+A private key must be generated for jwt.sign()
