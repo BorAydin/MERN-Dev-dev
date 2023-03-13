@@ -107,4 +107,37 @@ router.post(
   }
 );
 
+// @route  GET api/profile
+// @desc   Get all profiles
+// @access Public
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", ["name", "avatar"]);
+    res.json(profiles);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Sunucu hatası.");
+  }
+});
+
+// @route  GET api/profile/user/:user_id
+// @desc   Get profile by user ID
+// @access Public
+router.get("/user/:user_id", async (req, res) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.params.user_id,
+    }).populate("user", ["name", "avatar"]);
+
+    if (!profile) return res.status(400).json({ msg: "Profil bulunamadı." });
+
+    res.json(profile);
+  } catch (err) {
+    console.log(err.message);
+    if (err.kind == "ObjectId") {
+      return res.status(400).json({ msg: "Profil bulunamadı." });
+    }
+    res.status(500).send("Sunucu hatası.");
+  }
+});
 module.exports = router;
