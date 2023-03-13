@@ -140,4 +140,22 @@ router.get("/user/:user_id", async (req, res) => {
     res.status(500).send("Sunucu hatası.");
   }
 });
+
+// @route  DELETE api/profile
+// @desc   Delete profile, user & posts
+// @access Private
+router.delete("/", auth, async (req, res) => {
+  try {
+    // Remove Profile
+    await Profile.findOneAndRemove({ user: req.user.id });
+    // Remove User
+    await User.findOneAndRemove({ _id: req.user.id });
+
+    res.json({ msg: "Kullanıcı silindi." });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Sunucu hatası.");
+  }
+});
+
 module.exports = router;
