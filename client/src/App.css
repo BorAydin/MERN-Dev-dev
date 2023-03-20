@@ -2,6 +2,7 @@
   --primary-color: #17a2b8;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
+  --danger-color: #dc3545;
 }
 
 * {
@@ -78,6 +79,24 @@ img {
   outline: none;
 }
 
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+.alert-wrapper {
+  position: relative;
+  top: 4rem;
+  right: 2rem;
+  width: 100%;
+  margin-left: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
 .btn-primary {
   background: var(--primary-color);
   color: #fff;
@@ -90,6 +109,11 @@ img {
 
 .bg-dark {
   background: var(--dark-color);
+  color: #fff;
+}
+
+.alert-danger {
+  background: var(--danger-color);
   color: #fff;
 }
 
