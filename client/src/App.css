@@ -191,6 +191,14 @@ img {
 
 /* Mobile Styles */
 @media (max-width: 700px) {
+  .container {
+    margin-top: 8rem;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
   .x-large {
     font-size: 3rem;
   }
