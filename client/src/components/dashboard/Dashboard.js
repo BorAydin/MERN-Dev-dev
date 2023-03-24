@@ -29,7 +29,7 @@ const Dashboard = ({
         ) : (
           <>
             <p>Profil oluşturmamışsın. Lütfen oluştur.</p>
-            <Link to="create-profile" className="btn btn-primary my-1">
+            <Link to="/create-profile" className="btn btn-primary my-1">
               Profil Oluşturma
             </Link>
           </>
