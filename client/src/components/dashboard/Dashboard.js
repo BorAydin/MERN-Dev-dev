@@ -5,6 +5,7 @@ import { getCurrentProfile } from "../../actions/profile";
 import profile from "../../reducers/profile";
 import Spinner from "../layout/Spinner";
 import { Link } from "react-router-dom";
+import DashboardActions from "./DashboardActions";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -25,7 +26,9 @@ const Dashboard = ({
           <i className="fas fa-user"></i> Hoşgeldin {user && user.name}
         </p>
         {profile !== null ? (
-          <>Hey</>
+          <>
+            <DashboardActions />
+          </>
         ) : (
           <>
             <p>Profil oluşturmamışsın. Lütfen oluştur.</p>
