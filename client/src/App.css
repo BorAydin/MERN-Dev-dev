@@ -153,13 +153,19 @@ img {
 .form input[type="text"],
 .form input[type="email"],
 .form input[type="password"],
+.form input[type="date"],
 .form select,
-.forrm textarea {
+.form textarea {
   display: block;
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+}
+
+.form input[type="submit"],
+button {
+  font: inherit;
 }
 
 .form .social-input {
