@@ -15,7 +15,7 @@ export const getCurrentProfile = () => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
-      payload: { msg: err.response.StatusText, status: err.response.status },
+      payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
@@ -51,7 +51,7 @@ export const createProfile =
       }
       dispatch({
         type: PROFILE_ERROR,
-        payload: { msg: err.response.StatusText, status: err.response.status },
+        payload: { msg: err.response.statusText, status: err.response.status },
       });
     }
   };
@@ -65,7 +65,7 @@ export const addExperience = (formData) => async (dispatch) => {
       },
     };
 
-    const res = axios.put("/api/profile/experience", formData, config);
+    const res = await axios.put("/api/profile/experience", formData, config);
 
     dispatch({
       type: UPDATE_PROFILE,
@@ -82,7 +82,7 @@ export const addExperience = (formData) => async (dispatch) => {
 
     dispatch({
       type: PROFILE_ERROR,
-      payload: { msg: err.response.StatusText, status: err.response.status },
+      payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
@@ -96,7 +96,7 @@ export const addEducation = (formData) => async (dispatch) => {
       },
     };
 
-    const res = axios.put("/api/profile/education", formData, config);
+    const res = await axios.put("/api/profile/education", formData, config);
 
     dispatch({
       type: UPDATE_PROFILE,
@@ -113,7 +113,7 @@ export const addEducation = (formData) => async (dispatch) => {
 
     dispatch({
       type: PROFILE_ERROR,
-      payload: { msg: err.response.StatusText, status: err.response.status },
+      payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
