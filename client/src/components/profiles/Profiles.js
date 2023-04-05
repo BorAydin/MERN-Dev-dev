@@ -8,7 +8,7 @@ import { getProfiles } from "../../actions/profile";
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
-  }, []);
+  }, [getProfiles]);
 
   return (
     <section className="container">
@@ -27,7 +27,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
                 <ProfileItem key={profile._id} profile={profile} />
               ))
             ) : (
-              <h4> Yazılımcı bulunamadı </h4>
+              <>{profiles ? <Spinner /> : <h4> Yazılımcı bulunamadı </h4>}</>
             )}
           </div>
         </>

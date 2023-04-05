@@ -113,6 +113,7 @@ img {
   color: #333;
 }
 
+.btn-dark,
 .bg-dark {
   background: var(--dark-color);
   color: #fff;
