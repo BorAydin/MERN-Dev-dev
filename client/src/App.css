@@ -107,7 +107,8 @@ img {
   color: #fff;
 }
 
-.btn-light {
+.btn-light,
+.bg-light {
   background: var(--light-color);
   color: #333;
 }
@@ -130,6 +131,10 @@ img {
 
 .btn:hover {
   opacity: 0.8;
+}
+
+.round-img {
+  border-radius: 50%;
 }
 
 .dark-overlay {
@@ -251,6 +256,16 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  align-items: center;
+  grid-gap: 2rem;
+  padding: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 /* Mobile Styles */
