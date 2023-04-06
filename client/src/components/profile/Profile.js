@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { useParams, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
+import ProfileTop from "./ProfileTop";
+import ProfileAbout from "./ProfileAbout";
 import { getProfileById } from "../../actions/profile";
 
 const Profile = ({ getProfileById, auth, profile: { profile, loading } }) => {
@@ -27,6 +29,10 @@ const Profile = ({ getProfileById, auth, profile: { profile, loading } }) => {
                 Profili Düzenle
               </Link>
             )}
+          <div className="profile-grid my-1">
+            <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
+          </div>
         </>
       )}
     </section>
