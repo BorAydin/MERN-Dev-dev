@@ -63,6 +63,10 @@ img {
   color: var(--primary-color);
 }
 
+.text-dark {
+  color: var(--dark-color);
+}
+
 .p-1 {
   padding: 1rem;
 }
@@ -137,6 +141,12 @@ img {
 .alert-success {
   background: var(--success-color);
   color: #fff;
+}
+
+.bg-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
 }
 
 .btn:hover {
@@ -320,6 +330,36 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.profile-exp {
+  grid-area: exp;
+}
+
+.profile-edu {
+  grid-area: edu;
+}
+
+.profile-exp h2,
+.profile-edu h2 {
+  margin-bottom: 1rem;
+}
+
+.profile-exp > div,
+.profile-edu > div {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: #ccc 1px dotted;
+}
+
+.profile-exp > div:last-child,
+.profile-edu > div:last-child {
+  border: 0;
+}
+
+.profile-exp p,
+.profile-edu p {
+  margin: 0.5rem 0;
 }
 
 /* Mobile Styles */
