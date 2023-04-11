@@ -7,4 +7,4 @@ mongoURI is MongoDB connection data. Must add your connection data.
 
 jwtSecret is a private key, must be generated for jwt.sign()
 
-You must add your githubClientId and githubSecret values.
+You must add your githubToken value.
