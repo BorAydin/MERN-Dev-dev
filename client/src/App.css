@@ -96,6 +96,15 @@ img {
   outline: none;
 }
 
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: var(--light-color);
+  color: #333;
+}
+
 .alert {
   padding: 0.8rem;
   margin: 1rem 0;
@@ -115,19 +124,22 @@ img {
 }
 
 .btn-primary,
-.bg-primary {
+.bg-primary,
+.badge-primary {
   background: var(--primary-color);
   color: #fff;
 }
 
 .btn-light,
-.bg-light {
+.bg-light,
+.badge-light {
   background: var(--light-color);
   color: #333;
 }
 
 .btn-dark,
-.bg-dark {
+.bg-dark,
+.badge-dark {
   background: var(--dark-color);
   color: #fff;
 }
@@ -155,6 +167,11 @@ img {
 
 .round-img {
   border-radius: 50%;
+}
+
+.bg-light,
+.badge-light {
+  border: #ccc solid 1px;
 }
 
 .dark-overlay {
@@ -362,6 +379,19 @@ button {
   margin: 0.5rem 0;
 }
 
+.profile-github {
+  grid-area: github;
+}
+
+.profile-github .repo {
+  display: flex;
+}
+
+.profile-github .repo > div:first-child {
+  flex: 3;
+  flex-basis: 20%;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .container {
@@ -396,5 +426,33 @@ button {
 
   .navbar h1 {
     margin-bottom: 1rem;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile ul {
+    display: none;
+  }
+
+  .profile-top img,
+  .profile img {
+    width: 200px;
+    margin: auto;
+  }
+
+  .profile-grid {
+    grid-template-areas:
+      "top"
+      "about"
+      "exp"
+      "edu"
+      "github";
+  }
+
+  .profile-about .skills {
+    flex-direction: column;
   }
 }
