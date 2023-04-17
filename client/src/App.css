@@ -67,6 +67,10 @@ img {
   color: var(--dark-color);
 }
 
+.p {
+  padding: 0.5rem;
+}
+
 .p-1 {
   padding: 1rem;
 }
@@ -397,6 +401,11 @@ button {
   flex-basis: 20%;
 }
 
+.post-form .post-form-header {
+  background: var(--primary-color);
+  padding: 0.5rem;
+}
+
 .post {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -487,5 +496,14 @@ button {
 
   .profile-about .skills {
     flex-direction: column;
+  }
+
+  .post {
+    grid-template-columns: 1fr;
+  }
+
+  .post a,
+  .post button {
+    padding: 0.3rem 0.4rem;
   }
 }
