@@ -26,7 +26,6 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <>
       <section className="container">
         <h1 className="large text-primary">Giriş Yap</h1>
         <p className="lead">
@@ -61,7 +60,6 @@ const Login = ({ login, isAuthenticated }) => {
           </p>
         </form>
       </section>
-    </>
   );
 };
 
