@@ -32,7 +32,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <>
       <section className="container">
         <h1 className="large text-primary">Kayıt Ol</h1>
         <p className="lead">
@@ -87,7 +86,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </p>
         </form>
       </section>
-    </>
   );
 };
 
